@@ -1,12 +1,12 @@
-# 📚 TaskFlow — Gerenciador de Tarefas para Estudantes
+#  TaskFlow — Gerenciador de Tarefas para Estudantes
 
-![CI](https://github.com/SEU_USUARIO/taskflow/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/LeonelMLinhares/TaskFlow/actions/workflows/ci.yml/badge.svg)
 ![Versão](https://img.shields.io/badge/versão-1.0.0-blue)
 ![Python](https://img.shields.io/badge/python-3.11+-green)
 
 ---
 
-## 🎯 Problema Real
+##  Problema Real
 
 Estudantes de todos os níveis — ensino médio, técnico e superior — frequentemente perdem prazos de provas, trabalhos e entregas por falta de organização. Agendas físicas se perdem, aplicativos complexos demandam conta e internet, e planilhas são difíceis de manter no dia a dia.
 
@@ -14,7 +14,7 @@ Estudantes de todos os níveis — ensino médio, técnico e superior — freque
 
 ---
 
-## 💡 Proposta da Solução
+##  Proposta da Solução
 
 Uma aplicação CLI (linha de comando) em Python que permite ao estudante:
 
@@ -28,13 +28,13 @@ Os dados são armazenados localmente em um arquivo JSON — sem necessidade de i
 
 ---
 
-## 👥 Público-alvo
+##  Público-alvo
 
 Estudantes do ensino médio, técnico e superior que desejam controlar suas tarefas acadêmicas de forma simples, rápida e sem dependência de internet.
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 | Funcionalidade | Descrição |
 |---|---|
@@ -46,7 +46,7 @@ Estudantes do ensino médio, técnico e superior que desejam controlar suas tare
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+##  Tecnologias utilizadas
 
 - **Python 3.11+**
 - **pytest** — testes automatizados
@@ -55,7 +55,7 @@ Estudantes do ensino médio, técnico e superior que desejam controlar suas tare
 
 ---
 
-## 📦 Instalação
+##  Instalação
 
 ```bash
 # 1. Clone o repositório
@@ -73,7 +73,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Como executar
+##  Como executar
 
 ```bash
 python main.py
@@ -83,7 +83,7 @@ O menu interativo será exibido:
 
 ```
 =======================================================
-       📚 TaskFlow — Gerenciador de Tarefas
+        TaskFlow — Gerenciador de Tarefas
 =======================================================
 
 O que deseja fazer?
@@ -97,7 +97,7 @@ O que deseja fazer?
 
 ---
 
-## 🧪 Como rodar os testes
+##  Como rodar os testes
 
 ```bash
 pytest tests/ -v
@@ -113,7 +113,7 @@ tests/test_tasks.py::TestAddTask::test_titulo_vazio_levanta_erro PASSED
 
 ---
 
-## 🔍 Como rodar o lint
+##  Como rodar o lint
 
 ```bash
 ruff check src/ main.py
@@ -121,7 +121,7 @@ ruff check src/ main.py
 
 ---
 
-## 📁 Estrutura do projeto
+##  Estrutura do projeto
 
 ```
 taskflow/
@@ -143,16 +143,16 @@ taskflow/
 
 ---
 
-## 🔖 Versão atual
+##  Versão atual
 
 **1.0.0** — veja [pyproject.toml](./pyproject.toml)
 
 ---
 
-## 👤 Autor
+##  Autor
 
-**Seu Nome**
-- GitHub: [@SEU_USUARIO](https://github.com/SEU_USUARIO)
+Leonel Martins Linhares
+- GitHub: [@LeonelMLinhares](https://github.com/LeonelMLinhares)
 
 ---
 
