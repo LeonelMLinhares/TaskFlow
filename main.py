@@ -7,8 +7,13 @@ com previsão do tempo integrada (Open-Meteo API).
 import sys
 
 from src.clima import previsao_para_cidade
-from src.tasks import add_task, complete_task, list_tasks, remove_task, search_tasks
-
+from src.tasks import (
+    add_task,
+    complete_task,
+    list_tasks,
+    remove_task,
+    search_tasks,
+)
 
 def print_header():
     print("=" * 55)
