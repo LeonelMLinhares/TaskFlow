@@ -6,9 +6,9 @@ A previsão do tempo ajuda o estudante a planejar dias de estudo intensivo
 em casa versus atividades externas.
 """
 
-import urllib.request
-import urllib.parse
 import json
+import urllib.parse
+import urllib.request
 
 GEOCODING_URL = "https://geocoding-api.open-meteo.com/v1/search"
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
