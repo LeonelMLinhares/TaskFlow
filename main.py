@@ -1,10 +1,8 @@
 """
 TaskFlow CLI - Gerenciador de Tarefas para Estudantes.
-
-Interface de linha de comando para organizar tarefas acadêmicas.
+Interface de linha de comando para organizar tarefas acadêmicas
+com previsão do tempo integrada (Open-Meteo API).
 """
-
-
 
 import sys
 
@@ -31,6 +29,7 @@ def print_menu():
     print("  3. Concluir tarefa")
     print("  4. Remover tarefa")
     print("  5. Buscar tarefas")
+    print("  6. Previsão do tempo 🌤️")
     print("  0. Sair")
     print()
 
@@ -96,6 +95,30 @@ def cmd_search():
         print(f"\n❌ Erro: {e}")
 
 
+def cmd_clima():
+    print("\n--- 🌤️  Previsão do Tempo ---")
+    print("Consulte o clima para planejar seus dias de estudo!\n")
+    cidade = input("Nome da cidade: ").strip()
+    try:
+        dias_input = input("Quantos dias de previsão? (1-7, padrão 3): ").strip()
+        dias = int(dias_input) if dias_input else 3
+    except ValueError:
+        dias = 3
+    print("\n⏳ Consultando Open-Meteo API...")
+    try:
+        resultado = previsao_para_cidade(cidade, dias=dias)
+        print(f"\n📍 {resultado['cidade']}\n")
+        for dia in resultado["previsao"]:
+            print(f"  📅 {dia['data']}")
+            print(f"     {dia['condicao']}")
+            print(f"     🌡️  Máx: {dia['temp_max']}°C  |  Mín: {dia['temp_min']}°C")
+            print()
+    except ValueError as e:
+        print(f"\n❌ Erro: {e}")
+    except RuntimeError as e:
+        print(f"\n⚠️  Falha de conexão: {e}")
+
+
 def main():
     print_header()
     while True:
@@ -111,6 +134,8 @@ def main():
             cmd_remove()
         elif opcao == "5":
             cmd_search()
+        elif opcao == "6":
+            cmd_clima()
         elif opcao == "0":
             print("\nAté logo! Bons estudos 🎓")
             sys.exit(0)
