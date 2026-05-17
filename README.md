@@ -1,36 +1,37 @@
 # 📚 TaskFlow — Gerenciador de Tarefas para Estudantes
 
 ![CI](https://github.com/SEU_USUARIO/taskflow/actions/workflows/ci.yml/badge.svg)
-![Versão](https://img.shields.io/badge/versão-1.0.0-blue)
+![Versão](https://img.shields.io/badge/versão-1.1.0-blue)
 ![Python](https://img.shields.io/badge/python-3.11+-green)
+
+🔗 **[Aplicação publicada — ver no Render](https://taskflow.onrender.com)**
 
 ---
 
 ## 🎯 Problema Real
 
-Estudantes de todos os níveis — ensino médio, técnico e superior — frequentemente perdem prazos de provas, trabalhos e entregas por falta de organização. Agendas físicas se perdem, aplicativos complexos demandam conta e internet, e planilhas são difíceis de manter no dia a dia.
+Estudantes de todos os níveis perdem prazos por falta de organização. Além disso, o clima influencia a produtividade: saber se vai chover amanhã ajuda a decidir entre estudar em casa ou fazer atividades externas.
 
-**TaskFlow** resolve isso com uma ferramenta leve, rápida e que funciona offline, diretamente no terminal.
+**TaskFlow** resolve isso com uma ferramenta leve, rápida e sem dependência de conta externa.
 
 ---
 
 ## 💡 Proposta da Solução
 
-Uma aplicação CLI (linha de comando) em Python que permite ao estudante:
+CLI em Python que permite ao estudante:
 
 - Cadastrar tarefas com título, matéria e prazo
 - Listar todas as tarefas ou somente as pendentes
 - Marcar tarefas como concluídas
 - Remover tarefas desnecessárias
 - Buscar tarefas por título ou matéria
-
-Os dados são armazenados localmente em um arquivo JSON — sem necessidade de internet ou conta em serviço externo.
+- **Consultar previsão do tempo** para planejar os estudos (via Open-Meteo API 🌤️)
 
 ---
 
 ## 👥 Público-alvo
 
-Estudantes do ensino médio, técnico e superior que desejam controlar suas tarefas acadêmicas de forma simples, rápida e sem dependência de internet.
+Estudantes do ensino médio, técnico e superior.
 
 ---
 
@@ -43,31 +44,37 @@ Estudantes do ensino médio, técnico e superior que desejam controlar suas tare
 | Concluir tarefa | Marca uma tarefa como feita |
 | Remover tarefa | Exclui uma tarefa pelo ID |
 | Buscar tarefas | Filtra por título ou matéria |
+| **Previsão do tempo** 🌤️ | Consulta clima por cidade via Open-Meteo API |
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## 🌐 API Utilizada
+
+**[Open-Meteo](https://open-meteo.com/)** — gratuita, aberta, sem chave de acesso.
+
+- Geocodificação: converte nome de cidade em coordenadas
+- Previsão: temperatura máx/mín e condição climática para até 7 dias
+
+---
+
+## 🛠️ Tecnologias
 
 - **Python 3.11+**
 - **pytest** — testes automatizados
 - **ruff** — linting e análise estática
-- **GitHub Actions** — integração contínua (CI)
+- **GitHub Actions** — CI
+- **Open-Meteo API** — previsão do tempo
 
 ---
 
 ## 📦 Instalação
 
 ```bash
-# 1. Clone o repositório
 git clone https://github.com/SEU_USUARIO/taskflow.git
 cd taskflow
-
-# 2. (Opcional) Crie e ative um ambiente virtual
 python -m venv .venv
-source .venv/bin/activate  # Linux/Mac
-.venv\Scripts\activate     # Windows
-
-# 3. Instale as dependências
+source .venv/bin/activate   # Linux/Mac
+.venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 ```
 
@@ -78,8 +85,6 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-
-O menu interativo será exibido:
 
 ```
 =======================================================
@@ -92,7 +97,22 @@ O que deseja fazer?
   3. Concluir tarefa
   4. Remover tarefa
   5. Buscar tarefas
+  6. Previsão do tempo 🌤️
   0. Sair
+```
+
+Exemplo da previsão do tempo:
+
+```
+📍 Curitiba, Brasil
+
+  📅 2025-08-01
+     🌧️  Chuva leve
+     🌡️  Máx: 18.0°C  |  Mín: 12.0°C
+
+  📅 2025-08-02
+     ☀️  Céu limpo
+     🌡️  Máx: 22.5°C  |  Mín: 13.0°C
 ```
 
 ---
@@ -101,14 +121,6 @@ O que deseja fazer?
 
 ```bash
 pytest tests/ -v
-```
-
-Saída esperada:
-
-```
-tests/test_tasks.py::TestAddTask::test_adiciona_tarefa_valida PASSED
-tests/test_tasks.py::TestAddTask::test_titulo_vazio_levanta_erro PASSED
-...
 ```
 
 ---
@@ -127,16 +139,19 @@ ruff check src/ main.py
 taskflow/
 ├── src/
 │   ├── __init__.py
-│   └── tasks.py          # Lógica principal
+│   ├── tasks.py                  # Lógica de tarefas
+│   └── clima.py                  # Integração com Open-Meteo API
 ├── tests/
 │   ├── __init__.py
-│   └── test_tasks.py     # Testes automatizados
+│   ├── test_tasks.py             # Testes unitários
+│   └── test_clima_integracao.py  # Testes de integração (mock)
 ├── .github/
 │   └── workflows/
-│       └── ci.yml        # Pipeline de CI
-├── main.py               # Ponto de entrada CLI
-├── pyproject.toml        # Versão e configurações
-├── requirements.txt      # Dependências
+│       └── ci.yml
+├── main.py
+├── pyproject.toml
+├── requirements.txt
+├── CHANGELOG.md
 ├── .gitignore
 └── README.md
 ```
@@ -145,17 +160,12 @@ taskflow/
 
 ## 🔖 Versão atual
 
-**1.0.0** — veja [pyproject.toml](./pyproject.toml)
+**1.1.0** — veja [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
 ## 👤 Autor
 
-**Seu Nome**
-- GitHub: [@SEU_USUARIO](https://github.com/SEU_USUARIO)
+**Seu Nome** — [@SEU_USUARIO](https://github.com/SEU_USUARIO)
 
----
-
-## 🔗 Repositório
-
-[https://github.com/SEU_USUARIO/taskflow](https://github.com/SEU_USUARIO/taskflow)
+🔗 [https://github.com/SEU_USUARIO/taskflow](https://github.com/SEU_USUARIO/taskflow)
