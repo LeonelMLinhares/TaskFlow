@@ -4,8 +4,11 @@ TaskFlow CLI - Gerenciador de Tarefas para Estudantes.
 Interface de linha de comando para organizar tarefas acadêmicas.
 """
 
+
+
 import sys
 
+from src.clima import previsao_para_cidade
 from src.tasks import add_task, complete_task, list_tasks, remove_task, search_tasks
 
 
