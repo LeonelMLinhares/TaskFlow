@@ -59,7 +59,7 @@ Estudantes do ensino médio, técnico e superior que desejam controlar suas tare
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/SEU_USUARIO/taskflow.git
+git clone https://github.com/LeonelMLinhares/TaskFlow.git
 cd taskflow
 
 # 2. (Opcional) Crie e ative um ambiente virtual
