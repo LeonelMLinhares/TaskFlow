@@ -7,8 +7,7 @@ depender de conexão real com a internet durante o CI.
 """
 
 import json
-from io import BytesIO
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 
 import pytest
 
@@ -16,9 +15,7 @@ from src.clima import (
     buscar_coordenadas,
     buscar_previsao,
     previsao_para_cidade,
-    WMO_CODES,
 )
-
 
 # ─────────────────────────────────────────────
 # Fixtures de respostas simuladas (mocks)

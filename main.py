@@ -16,6 +16,7 @@ from src.tasks import (
     search_tasks,
 )
 
+
 def print_header():
     print("=" * 55)
     print("       📚 TaskFlow — Gerenciador de Tarefas")

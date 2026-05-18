@@ -2,9 +2,6 @@
 Testes automatizados para o módulo de tarefas do TaskFlow.
 """
 
-import json
-import os
-import tempfile
 import pytest
 
 import src.tasks as tasks_module
