@@ -7,7 +7,7 @@ com previsão do tempo integrada (Open-Meteo API).
 
 import sys
 
-from src.clima import previsao_para_cidade
+
 from src.tasks import (
     add_task,
     complete_task,
