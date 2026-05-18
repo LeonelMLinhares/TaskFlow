@@ -4,7 +4,7 @@
 ![Versão](https://img.shields.io/badge/versão-1.1.0-blue)
 ![Python](https://img.shields.io/badge/python-3.11+-green)
 
-🔗 **[Aplicação publicada — ver no Render](https://taskflow.onrender.com)**
+🔗 **[Aplicação publicada — ver no Render](https://dashboard.render.com/web/srv-d856fe9kh4rs73dlkbmg)**
 
 ---
 
