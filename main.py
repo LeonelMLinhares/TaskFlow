@@ -1,5 +1,6 @@
 """
 TaskFlow CLI - Gerenciador de Tarefas para Estudantes.
+
 Interface de linha de comando para organizar tarefas acadêmicas
 com previsão do tempo integrada (Open-Meteo API).
 """
@@ -109,6 +110,7 @@ def cmd_clima():
         dias = int(dias_input) if dias_input else 3
     except ValueError:
         dias = 3
+
     print("\n⏳ Consultando Open-Meteo API...")
     try:
         resultado = previsao_para_cidade(cidade, dias=dias)
