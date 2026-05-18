@@ -1,4 +1,4 @@
-# 📚 TaskFlow — Gerenciador de Tarefas para Estudantes
+#  TaskFlow — Gerenciador de Tarefas para Estudantes
 
 ![CI](https://github.com/SEU_USUARIO/taskflow/actions/workflows/ci.yml/badge.svg)
 ![Versão](https://img.shields.io/badge/versão-1.1.0-blue)
@@ -8,7 +8,7 @@
 
 ---
 
-## 🎯 Problema Real
+##  Problema Real
 
 Estudantes de todos os níveis perdem prazos por falta de organização. Além disso, o clima influencia a produtividade: saber se vai chover amanhã ajuda a decidir entre estudar em casa ou fazer atividades externas.
 
@@ -16,7 +16,7 @@ Estudantes de todos os níveis perdem prazos por falta de organização. Além d
 
 ---
 
-## 💡 Proposta da Solução
+##  Proposta da Solução
 
 CLI em Python que permite ao estudante:
 
@@ -29,13 +29,13 @@ CLI em Python que permite ao estudante:
 
 ---
 
-## 👥 Público-alvo
+##  Público-alvo
 
 Estudantes do ensino médio, técnico e superior.
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 | Funcionalidade | Descrição |
 |---|---|
@@ -44,11 +44,11 @@ Estudantes do ensino médio, técnico e superior.
 | Concluir tarefa | Marca uma tarefa como feita |
 | Remover tarefa | Exclui uma tarefa pelo ID |
 | Buscar tarefas | Filtra por título ou matéria |
-| **Previsão do tempo** 🌤️ | Consulta clima por cidade via Open-Meteo API |
+| **Previsão do tempo**  | Consulta clima por cidade via Open-Meteo API |
 
 ---
 
-## 🌐 API Utilizada
+##  API Utilizada
 
 **[Open-Meteo](https://open-meteo.com/)** — gratuita, aberta, sem chave de acesso.
 
@@ -57,7 +57,7 @@ Estudantes do ensino médio, técnico e superior.
 
 ---
 
-## 🛠️ Tecnologias
+##  Tecnologias
 
 - **Python 3.11+**
 - **pytest** — testes automatizados
@@ -67,10 +67,10 @@ Estudantes do ensino médio, técnico e superior.
 
 ---
 
-## 📦 Instalação
+##  Instalação
 
 ```bash
-git clone https://github.com/SEU_USUARIO/taskflow.git
+git clone https://github.com/LeonelMLinhares/TaskFlow.git
 cd taskflow
 python -m venv .venv
 source .venv/bin/activate   # Linux/Mac
@@ -80,7 +80,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Como executar
+##  Como executar
 
 ```bash
 python main.py
@@ -88,7 +88,7 @@ python main.py
 
 ```
 =======================================================
-       📚 TaskFlow — Gerenciador de Tarefas
+        TaskFlow — Gerenciador de Tarefas
 =======================================================
 
 O que deseja fazer?
@@ -97,27 +97,27 @@ O que deseja fazer?
   3. Concluir tarefa
   4. Remover tarefa
   5. Buscar tarefas
-  6. Previsão do tempo 🌤️
+  6. Previsão do tempo 
   0. Sair
 ```
 
 Exemplo da previsão do tempo:
 
 ```
-📍 Curitiba, Brasil
+ Curitiba, Brasil
 
-  📅 2025-08-01
-     🌧️  Chuva leve
-     🌡️  Máx: 18.0°C  |  Mín: 12.0°C
+   2025-08-01
+       Chuva leve
+       Máx: 18.0°C  |  Mín: 12.0°C
 
-  📅 2025-08-02
-     ☀️  Céu limpo
-     🌡️  Máx: 22.5°C  |  Mín: 13.0°C
+   2025-08-02
+       Céu limpo
+       Máx: 22.5°C  |  Mín: 13.0°C
 ```
 
 ---
 
-## 🧪 Como rodar os testes
+##  Como rodar os testes
 
 ```bash
 pytest tests/ -v
@@ -125,7 +125,7 @@ pytest tests/ -v
 
 ---
 
-## 🔍 Como rodar o lint
+##  Como rodar o lint
 
 ```bash
 ruff check src/ main.py
@@ -133,7 +133,7 @@ ruff check src/ main.py
 
 ---
 
-## 📁 Estrutura do projeto
+##  Estrutura do projeto
 
 ```
 taskflow/
@@ -158,14 +158,14 @@ taskflow/
 
 ---
 
-## 🔖 Versão atual
+##  Versão atual
 
 **1.1.0** — veja [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
-## 👤 Autor
+##  Autor
 
-**Seu Nome** — [@SEU_USUARIO](https://github.com/SEU_USUARIO)
+**Leonel Martins Linhares** — [@LeonelMLinhares](https://github.com/LeonelMLinhares)
 
-🔗 [https://github.com/SEU_USUARIO/taskflow](https://github.com/SEU_USUARIO/taskflow)
+🔗 [https://github.com/LeonelMLinhares/TaskFlow](https://github.com/LeonelMLinhares/TaskFlow)
