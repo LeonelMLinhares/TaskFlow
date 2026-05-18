@@ -128,6 +128,9 @@ def cmd_clima():
 
 
 def main():
+    if not sys.stdin.isatty():
+        print("TaskFlow CLI executável localmente.")
+        return
     print_header()
     while True:
         print_menu()
